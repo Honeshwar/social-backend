@@ -60,10 +60,10 @@ app.get("/", (req, res) => {
 
 app.use("/", require("./routers"));
 
-app.listen(port, (error) => {
-  if (error) console.log(error);
-  console.log("Server running on port 8000");
-});
+// app.listen(port, (error) => {
+//   if (error) console.log(error);
+//   console.log("Server running on port 8000");
+// });
 
 // vercel server less so no need to listen
-// module.exports = app;
+module.exports = app;
