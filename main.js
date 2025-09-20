@@ -30,15 +30,15 @@ const app = express();
 const port = process.env?.PORT;
 
 //add db
-// let isConnected = false; //track connection
-//middleware to check and connect db before each req
-// app.use(async (req, res, next) => {
-//   if (!isConnected) {
-//     await connectToMongoDB();
-//     isConnected = true;
-//   }
-//   next();
-// });
+let isConnected = false; //track connection
+// middleware to check and connect db before each req
+app.use(async (req, res, next) => {
+  if (!isConnected) {
+    await connectToMongoDB();
+    isConnected = true;
+  }
+  next();
+});
 
 //cors
 app.use(
