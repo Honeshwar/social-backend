@@ -55,7 +55,7 @@ app.use(helmet());
 app.use(morgan("common"));
 
 app.get("/", (req, res) => {
-  console.log("Welcome to social backend");
+  res.send("Hello World! server is up");
 });
 
 app.use("/", require("./routers"));
