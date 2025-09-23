@@ -42,11 +42,12 @@ app.use(async (req, res, next) => {
 
 //cors
 app.use(
-  cors({
-    origin: "http://localhost:3000", //frontend url, for local test
-    // methods: ["GET", "POST", "PUT", "DELETE"],
-    // credentials: true, //access-control-allow-credentials:true
-  })
+  // cors({
+  //   origin: "http://localhost:3000", //frontend url, for local test
+  //   // methods: ["GET", "POST", "PUT", "DELETE"],
+  //   // credentials: true, //access-control-allow-credentials:true
+  // })
+  cors()
 );
 // app.use(express.urlencoded());//only work for url, x-www-form-urlencoded
 
